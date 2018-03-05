@@ -1,5 +1,5 @@
 {
-    "name": "brain-games",
+    "name": "brain-games-romanoffivan",
     "version": "1.0.0",
     "description": "game",
     "main": "index.js",
@@ -19,7 +19,7 @@
         "type": "git",
         "url": "git+https://github.com/romanoffivan/project-lvl1-s232.git"
     },
-    "author": "",
+    "author": "romanoffivan",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/romanoffivan/project-lvl1-s232/issues"
