@@ -19,7 +19,7 @@ export const beginingEvenGame = () => {
     if (acc === 3) {
       return console.log(`Congratulations, ${userName}!`);
     }
-    const randomNum = Math.floor(Math.random() * 101);
+    const randomNum = Math.floor(Math.random() * 101) + 1;
     console.log(`Question: ${randomNum}`);
     const answer = readlineSync.question('Your answer: ');
     if (even(randomNum) !== answer) {
