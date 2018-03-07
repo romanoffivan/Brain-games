@@ -1,6 +1,6 @@
 {
     "name": "brain-games-romanoffivan",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "game",
     "main": "dist/index.js",
     "bin": {
@@ -38,6 +38,7 @@
         "eslint-plugin-import": "^2.9.0"
     },
     "dependencies": {
+        "hexlet-pairs": "^1.0.5",
         "readline-sync": "^1.4.9"
     }
 }
