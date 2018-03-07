@@ -11,16 +11,16 @@ const generateData = () => {
   const firstNum = getRandomNum(max, min);
   const secondNum = getRandomNum(max, min);
   const randomOperator = arrayOfOperators[Math.floor(Math.random() * arrayOfOperators.length)];
-  const calcRandomNum = (data) => {
-    if (data === '+') {
-      return firstNum + secondNum;
-    } else if (data === '-') {
-      return firstNum - secondNum;
+  const calcResult = (x, y, operator) => {
+    if (operator === '+') {
+      return x + y;
+    } else if (operator === '-') {
+      return x - y;
     }
-    return firstNum * secondNum;
+    return x * y;
   };
   const randomExpression = `${firstNum} ${randomOperator} ${secondNum}`;
-  const correctAnswer = `${calcRandomNum(randomOperator)}`;
+  const correctAnswer = `${calcResult(firstNum, secondNum, randomOperator)}`;
   return cons(randomExpression, correctAnswer);
 };
 
