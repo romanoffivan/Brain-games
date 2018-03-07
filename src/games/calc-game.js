@@ -11,7 +11,7 @@ const generateData = () => {
   const firstNum = getRandomNum(max, min);
   const secondNum = getRandomNum(max, min);
   const randomOperator = arrayOfOperators[Math.floor(Math.random() * arrayOfOperators.length)];
-  const calcNum = (data) => {
+  const calcRandomNum = (data) => {
     if (data === '+') {
       return firstNum + secondNum;
     } else if (data === '-') {
@@ -20,7 +20,7 @@ const generateData = () => {
     return firstNum * secondNum;
   };
   const randomExpression = `${firstNum} ${randomOperator} ${secondNum}`;
-  const correctAnswer = `${calcNum(randomOperator)}`;
+  const correctAnswer = `${calcRandomNum(randomOperator)}`;
   return cons(randomExpression, correctAnswer);
 };
 
