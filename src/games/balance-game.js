@@ -8,12 +8,13 @@ const taskGame = 'Balance the given number.';
 
 const getBalance = (number) => {
   const arr = number.toString().split('').map(elem => Number(elem)).sort();
-  while (arr[arr.length - 1] - arr[0] > 1) {
-    arr[arr.length - 1] -= 1;
-    arr[0] += 1;
-    arr.sort();
+  if (arr[arr.length - 1] - arr[0] < 2) {
+    return arr.join('');
   }
-  return arr.join('');
+  arr[arr.length - 1] -= 1;
+  arr[0] += 1;
+  arr.sort();
+  return getBalance(Number(arr.join('').toString()));
 };
 
 const generateData = () => {
