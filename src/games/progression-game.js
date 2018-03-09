@@ -1,15 +1,31 @@
 import { cons } from 'hexlet-pairs';
 import run from '..';
+import getRandomNum from '../randomGenerator';
 
 const taskGame = 'What number is missing in this progression?';
-const arrOfProgression = [5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25];
+const maxLength = 10;
+const min = 1;
+const max = 9;
 
-const generateData = () => {
-  const newArray = arrOfProgression.slice();
+const makeProgression = (start, step) => {
+  const iter = (current, acc) => {
+    if (acc.length === maxLength) {
+      return acc;
+    }
+    return iter(current + step, acc.concat(current));
+  };
+  return iter(start, []);
+};
+
+export const generateData = () => {
+  const start = getRandomNum(max, min);
+  const step = getRandomNum(max, min);
+  const prog = makeProgression(start, step);
+  const newArray = prog.slice();
   const randomElem = Math.floor(Math.random() * newArray.length);
   newArray[randomElem] = '..';
   const randomProgression = newArray.join(' ');
-  const correctAnswer = arrOfProgression[newArray.indexOf('..')].toString();
+  const correctAnswer = prog[newArray.indexOf('..')].toString();
   return cons(randomProgression, correctAnswer);
 };
 
