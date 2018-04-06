@@ -24,14 +24,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/romanoffivan/project-lvl1-s232.git"
+        "url": "git+https://github.com/romanoffivan/Brain-games.git"
     },
     "author": "romanoffivan",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/romanoffivan/project-lvl1-s232/issues"
+        "url": "https://github.com/romanoffivan/Brain-games/issues"
     },
-    "homepage": "https://github.com/romanoffivan/project-lvl1-s232#readme",
+    "homepage": "https://github.com/romanoffivan/Brain-games#readme",
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
